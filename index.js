@@ -1,9 +1,19 @@
 function hasTargetSum(array, target) {
+
+  const seenNumbers = {}
+
   // Write your algorithm here
+for(const number of array){
+  const complement = target- number
+if(complement in seenNumbers) return true
+  seenNumbers[number] = true
+}
+return false
 }
 
 /* 
   Write the Big O time complexity of your function here
+  Runtime: O(n)
 */
 
 /* 
@@ -12,6 +22,7 @@ function hasTargetSum(array, target) {
 
 /*
   Add written explanation of your solution here
+  I made a function called hasTargetSum that checks if two numbers in an array adds up to some target.
 */
 
 // You can run `node index.js` to view these console logs
